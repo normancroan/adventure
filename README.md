@@ -1,7 +1,7 @@
 # adventure
 Data driven choose your own adventure game
 
-#Usage:
+#usage:
 Before I deploy this to a server we can play with it by:
   1. Clone repository
   2. 'node app.js' from that directory
