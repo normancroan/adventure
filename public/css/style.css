@@ -9,3 +9,11 @@
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
 }
+
+body {
+  background-color: #353C3E !important;
+}
+
+.questText {
+  color: #EEEEEE;
+}

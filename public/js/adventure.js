@@ -24,24 +24,34 @@ var quest = [];
  }
 
   function spawnButton(buttonId, buttonName){
-    var $input = $('<input id="' +buttonId+ '" value="' +buttonName+ '" type="button"  class="btn btn-info"/><br><br>');
+    var $input = $('<input id="' +buttonId+ '" value="' +buttonName+ '" type="button"  class="btn btn-danger"/><br><br>');
     $input.appendTo($("#answerButtons"));
   }
 
   function showQuest(id){
-    //show quest text
-    $('#questText').text(quest[id].questText);
+    //fade quest text out, load correct quest, fade in
+    $( "#questText" ).fadeOut( "fast", function() {
+        $('#questText').text(quest[id].questText);
+            $( "#questText" ).fadeIn( "slow", function() {});
+    });
+
 
     //clean up div and show the answer buttons
-    $( "#answerButtons" ).empty();
-    for (var i=0; i<quest[id].answers.length; i++){
+    $( "#answerButtons" ).fadeOut( "fast", function() {
+      // Animation complete.
+      $( "#answerButtons" ).empty();
+      for (var i=0; i<quest[id].answers.length; i++){
       spawnButton(quest[id].answers[i].route,
         quest[id].answers[i].answerText);
       }
-    //start listening for button clicks
-      $("#answerButtons").find(".btn").click(function () {
-          showQuest(this.id);
+      $( "#answerButtons" ).fadeIn( "slow", function() {
+        //start listening for button clicks
+          $("#answerButtons").find(".btn").click(function () {
+              showQuest(this.id);
+            });
+          });
       });
+
     }
 
 $( document ).ready(function() {
