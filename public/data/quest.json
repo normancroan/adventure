@@ -1,0 +1,17 @@
+[
+  {
+    "questId" : 0,
+    "questText": "Greetings traveler, your adventure begins now",
+    "answers": [{"answerText": "Go to #2", "route": 1}, {"answerText": "Go to #3", "route": 2}]
+  },
+  {
+    "questId" : 1,
+    "questText": "This is the second quest text",
+    "answers": [{"answerText": "Go to #3", "route": 2}]
+  },
+  {
+    "questId" : 2,
+    "questText": "This is the third quest text",
+    "answers": [{"answerText": "Go to #1", "route": 0}]
+  }
+]
