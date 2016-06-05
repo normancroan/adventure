@@ -46,7 +46,11 @@ var quest = [];
       var addTextByDelay = function(text,elem,delay){
           if(text.length >0){
               //append first character
-              elem.append(text[0]);
+              if (text[0] === "|") {
+                elem.append("<br>")
+              } else {
+                elem.append(text[0]);
+              }
               setTimeout(
                   function(){
                       //Slice text by 1 character and call function again
