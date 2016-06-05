@@ -29,30 +29,35 @@ var quest = [];
   }
 
   function showQuest(id){
+    resetButtons();
     //fade quest text out, load correct quest, fade in
     $( "#questText" ).fadeOut( "fast", function() {
         $('#questText').text(quest[id].questText);
-            $( "#questText" ).fadeIn( "slow", function() {});
+            $( "#questText" ).fadeIn( "slow", function() {
+              displayButtons();
+            });
     });
 
-
-    //clean up div and show the answer buttons
-    $( "#answerButtons" ).fadeOut( "fast", function() {
-      // Animation complete.
-      $( "#answerButtons" ).empty();
-      for (var i=0; i<quest[id].answers.length; i++){
-      spawnButton(quest[id].answers[i].route,
-        quest[id].answers[i].answerText);
-      }
+    function displayButtons(){
       $( "#answerButtons" ).fadeIn( "slow", function() {
         //start listening for button clicks
           $("#answerButtons").find(".btn").click(function () {
               showQuest(this.id);
             });
           });
-      });
-
     }
+    function resetButtons(){
+      //clean up div and show the answer buttons
+      $( "#answerButtons" ).fadeOut( "fast", function() {
+        // Animation complete.
+        $( "#answerButtons" ).empty();
+        for (var i=0; i<quest[id].answers.length; i++){
+        spawnButton(quest[id].answers[i].route,
+          quest[id].answers[i].answerText);
+        }
+      });
+    }
+  }
 
 $( document ).ready(function() {
     init();
