@@ -29,6 +29,7 @@ var quest = [];
   }
 
   function showQuest(id){
+    /*
     resetButtons();
     //fade quest text out, load correct quest, fade in
     $( "#questText" ).fadeOut( "fast", function() {
@@ -37,6 +38,36 @@ var quest = [];
               displayButtons();
             });
     });
+    */
+    //scroll the text REFACTOR THIS UGLY THING :P
+      $( "#questText" ).empty();
+      var text = quest[id].questText;
+      var delay=40;
+      var elem = $("#questText");
+      var addTextByDelay = function(text,elem,delay){
+          if(!elem){
+              elem = $("body");
+          }
+          if(!delay){
+              delay = 25;
+          }
+          if(text.length >0){
+              //append first character
+              elem.append(text[0]);
+              setTimeout(
+                  function(){
+                    console.log("called");
+                      //Slice text by 1 character and call function again
+                      addTextByDelay(text.slice(1),elem,delay);
+                   },delay
+                  );
+          } else {
+            displayButtons();
+          }
+      }
+
+    resetButtons();
+    addTextByDelay(text,elem,delay);
 
     function displayButtons(){
       $( "#answerButtons" ).fadeIn( "slow", function() {
