@@ -24,7 +24,7 @@ var quest = [];
  }
 
   function spawnButton(buttonId, buttonName){
-    var $input = $('<input id="' +buttonId+ '" value="' +buttonName+ '" type="button"  class="btn btn-warning"/>');
+    var $input = $('<input id="' +buttonId+ '" value="' +buttonName+ '" type="button"  class="btn btn-info"/><br><br>');
     $input.appendTo($("#answerButtons"));
   }
 
