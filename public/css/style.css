@@ -17,3 +17,7 @@ body {
 .questText {
   color: #EEEEEE;
 }
+
+.questRow {
+  padding-top: 10%;
+}
