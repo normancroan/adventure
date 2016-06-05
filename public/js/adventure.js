@@ -23,14 +23,12 @@ var quest = [];
    });
  }
 
-
   function spawnButton(buttonId, buttonName){
     var $input = $('<input id="' +buttonId+ '" value="' +buttonName+ '" type="button"  class="btn btn-warning"/>');
     $input.appendTo($("#answerButtons"));
   }
 
   function showQuest(id){
-    console.log(quest);
     //show quest text
     $('#questText').text(quest[id].questText);
 
