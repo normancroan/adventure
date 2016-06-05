@@ -16,7 +16,11 @@ app.use(express.static('public'));
 app.get('/', function(req, res) {
     res.redirect('index.html');
 });
+app.set('port', process.env.PORT || 8080);
 
-app.listen(3000, function () {
+/*app.listen(3000, function () {
   console.log('Adventure app listening on port 3000!');
 });
+*/
+
+app.listen(app.get('port'));
