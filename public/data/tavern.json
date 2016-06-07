@@ -1,0 +1,22 @@
+[
+  {
+    "questId" : 0,
+    "questText": "You wake in a bustling tavern, head pounding and eyes heavy. A man approaches you with an odd look in his eyes.||You notice a blade strapped to the hip of the patron beside you and a pistol on the table nearby. The man approaches faster and reaches into his jacket.",
+    "answers": [{"answerText": "Grab the pistol and aim", "route": 1}, {"answerText": "Reach for the blade", "route": 2}]
+  },
+  {
+    "questId" : 1,
+    "questText": "'He's got a gun!'||Panic ensues as those around you head for the door. The approaching man is lost in the confusion, without sight of him it may not be a good idea to stand around.",
+    "answers": [{"answerText": "Stand around, against your better judgement", "route": 3},{"answerText": "Holster your weapon and move through the crowd, towards the front doot.", "route": 3}]
+  },
+  {
+    "questId" : 2,
+    "questText": "'What the?!', 'got a death wish?'||The patron draws his blade on you, it's clearly time to leave.",
+    "answers": [{"answerText": "Run for the front door", "route": 3},{"answerText": "Dive under the table", "route": 3}]
+  },
+  {
+    "questId" : 3,
+    "questText": "The End",
+    "answers": []
+  }
+]
