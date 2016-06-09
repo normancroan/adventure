@@ -72,9 +72,11 @@ function init() {
     quest = JSON.parse(response);
      // load first quest when parsed
     showQuest(0);
+    console.log('initialized');
   });
 }
 
 $(document).ready(function () {
+  console.log('page is ready');
   init();
 });
