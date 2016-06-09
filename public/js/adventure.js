@@ -1,4 +1,4 @@
-let quest = [];
+var quest = [];
 
 function loadJSON(callback) {
   const xobj = new XMLHttpRequest();
