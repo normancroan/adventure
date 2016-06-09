@@ -1,7 +1,13 @@
 {
     "extends": "airbnb",
-    "globals" : {
+    "installedESLint": true,
+    "globals": {
       "$": 1
+    },
+    "rules": {
+      "strict": "off",
+      "func-names": "off",
+      "prefer-arrow-callback": "off"
     },
     "plugins": [
         "react"
