@@ -54,7 +54,7 @@ function showQuest(id) {
     $('#answerButtons').fadeOut('fast', function () {
         // Animation complete.
       $('#answerButtons').empty();
-      for (let i = 0; i < quest[id].answers.length; i++) {
+      for (var i = 0; i < quest[id].answers.length; i++) {
         spawnButton(quest[id].answers[i].route,
           quest[id].answers[i].answerText);
       }
