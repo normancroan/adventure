@@ -1,0 +1,9 @@
+{
+    "extends": "airbnb",
+    "globals" : {
+      "$": 1
+    },
+    "plugins": [
+        "react"
+    ]
+}
