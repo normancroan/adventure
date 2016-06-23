@@ -33,7 +33,7 @@ function showQuest(id) {
   const delay = 45;
   const elem = $('#questText');
   const addTextByDelay = function (text, elem, delay) {
-    $('body').click(function () {
+    $("#quest").click(function () {
       console.log("changing delay");
       delay = 5;
     });
