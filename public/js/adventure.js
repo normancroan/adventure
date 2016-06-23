@@ -30,9 +30,13 @@ function spawnButton(buttonId, buttonName) {
 
 function showQuest(id) {
   const text = quest[id].questText;
-  const delay = 50;
+  const delay = 45;
   const elem = $('#questText');
   const addTextByDelay = function (text, elem, delay) {
+    $('#questText').click(function () {
+      console.log("changing delay");
+      delay = 5;
+    });
     function displayButtons() {
       $('#answerButtons').fadeIn('slow', function () {
           // start listening for button clicks

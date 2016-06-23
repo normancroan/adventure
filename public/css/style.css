@@ -2,6 +2,7 @@
   display: inline-block;
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
+  color: #EEEEEE;
 }
 
 .btn {
@@ -13,10 +14,10 @@ body {
   background-color: #353C3E !important;
 }
 
-.questText {
-  color: #EEEEEE;
-}
-
 .questRow {
   padding-top: 10%;
+}
+
+#answerButtons {
+  padding-top: 10px;
 }
